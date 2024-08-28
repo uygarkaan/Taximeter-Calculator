@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class taximetercalculator {
+    public static void main(String[] args) {
+        
+         /**
+         * This GPA calculator was created by @uygarkaan.
+         * You can find more projects and tutorials at https://github.com/uygarkaan
+         */
+
+        Scanner scanner = new Scanner(System.in);
+
+        int km;
+        double perKm = 2.20, total, totalKmPrice, startPrice = 10;
+
+        System.out.println("Enter the distance in KM: ");
+        km = scanner.nextInt();
+
+        total = startPrice + (km * perKm);
+        totalKmPrice = km * perKm;
+
+        total = (total < 20) ? 20 : total;
+
+        System.out.println("Taximeter starting price: " + startPrice);
+        System.out.println("Distance price: " + totalKmPrice);
+        System.out.println("Total fare: " + total);
+    }
+}
